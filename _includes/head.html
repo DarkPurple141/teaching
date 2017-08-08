@@ -1,0 +1,14 @@
+<head>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+
+  <title>{% if page.title %}{{ page.title | escape }}{% else %}{{ site.title | escape }}{% endif %}</title>
+
+  <link rel="stylesheet" href="{{ "/assets/main.css" | relative_url }}">
+  <link type="text/css" rel="stylesheet" href="/static/css/prism.css">
+  <link type="text/css" rel="stylesheet" href="/static/css/styles.css">
+  <link type="text/css" rel="stylesheet" href="/assets/main.css">
+  <script type="text/javascript" href="/static/js/prism.min.js"/></script>
+  <link rel="canonical" href="{{ page.url | replace:'index.html','' | absolute_url }}">
+</head>

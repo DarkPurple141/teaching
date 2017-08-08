@@ -1,3 +1,6 @@
+---
+layout: code
+---
 ```c
 // Alex Hinds
 // A cool program to read a number and tell u the day of the week

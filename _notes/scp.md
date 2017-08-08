@@ -1,6 +1,9 @@
-# Things to know (scp)
-
-###So apparently you guys need to submit your lab work individually.
+---
+layout: default
+title: Secure Copy (SCP)
+basename: scp.html
+---
+### So apparently you guys need to submit your lab work individually.
 
 This doesn't mean you can't use the same file. So to pass the file to your partner do something like this. NB. scp stands for secure copy. We use to to transfer files via the command line.
 

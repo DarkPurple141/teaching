@@ -1,3 +1,7 @@
+---
+layout: code
+---
+
 ```c
 // demo program for cases and if statements
 // program by Alex Hinds.

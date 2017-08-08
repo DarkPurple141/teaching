@@ -281,12 +281,11 @@ sup {
 * {
 	-webkit-print-color-adjust: exact;
 }
-@media screen and (min-width: 914px) {
-    body {
-        width: 854px;
-        margin:0 auto;
-    }
+
+.site-header {
+  background-color: #ff9d98;
 }
+
 @media print {
 	table, pre {
 		page-break-inside: avoid;
