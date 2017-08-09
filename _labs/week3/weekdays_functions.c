@@ -35,9 +35,8 @@ void englishWeekend(int day);
 
 int main(int argc, char *argv[]) {
     // read in the day;
-    //int language = selectLanguage();
-    int language = 0;
-    int day = readDay(0);
+    int language = selectLanguage();
+    int day = readDay(language);
     if (day == DAY_ERROR || day == LANGUAGE_ERROR) {
       return EXIT_FAILURE;
     }
