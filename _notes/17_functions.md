@@ -5,6 +5,7 @@ basename: 17_functions.html
 stub: How functions work and why we use them
 ---
 ## How functions work and why we use them
+
 Functions are one of the key foundations of programming, and are incredibly powerful
 when used correctly.
 
