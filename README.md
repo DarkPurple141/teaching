@@ -15,7 +15,7 @@ To contribute you can simply make a fork, make your changes in your own branch, 
 Hosting is done on surge, through surge.sh. The site is currently live [here](http://unsw-lab.surge.sh/).
 
 ## Rendering
-All rendering is done with a combination of [prism](https://github.com/PrismLibrary/Prism) (code rendering), and modified jekyll-based css. All files are written in a combination of markdown, html with [liquid](https://github.com/Shopify/liquid/wiki), and jekyll-ified markdown.
+All rendering is done with a combination of [prism](https://github.com/PrismJS) (code rendering), and modified jekyll-based css. All files are written in a combination of markdown, html with [liquid](https://github.com/Shopify/liquid/wiki), and jekyll-ified markdown.
 
 ## Collaborators
 Hoping to get assistant tutors involved throughout this semester and next to add more content! If you're interested hit me up.
