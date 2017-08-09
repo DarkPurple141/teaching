@@ -8,5 +8,6 @@ basename: week3
 * [functions.c](functions.html)
 * [confusing.c](confusing.html)
 * [negative.c](negative.html)
+* [weekdays_functions.c](weekdays_functions.html)
 
 [Back](../)
