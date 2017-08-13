@@ -28,9 +28,9 @@ Separating out our logic into smaller blocks gives us a number of advantages:
 Functions in C have the following common syntax used to define them:
 [return type] [function name] ([paramter1 type] paramater1...);
 
-To be explicit, these are all valid function declarations:
+To be explicit, these are all valid function prototypes or declarations:
 ```c
-// The following are function declarations, that is they say "this function exists"
+// The following are function prototypes, that is they say "this function exists"
 // However these are simply skeletons, we need to properly define them to make them valid.
 
 // returns an int, is called 'isEven', takes in a number (int)
