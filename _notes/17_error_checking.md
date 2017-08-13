@@ -35,13 +35,14 @@ other reasons errors occur.
 
 ## The compiler is your friend
 
-Despite how annoying the compiler may be at times with all its error/warning messages, it is just trying to be your friend!
+Despite how annoying the compiler may be at times with all its error/warning messages,
+ultimately it's trying to help you write better software.
 
-Invest time into understanding error/warning output. It's worth it and will minimise your frustration when debugging. Understanding error outputs will allow you to quickly find and deal with your problem in the best possible way.
+Invest time into understanding error/warning output. Understanding error outputs will allow you to quickly find and deal with your problem in the best possible way.
 
-And, if you can, try to compile with dcc over gcc. The dcc compiler picks up on a few extra things that gcc will happily overlook. If you do use gcc, compile with the -Wall and -Werror flags.
+If you can (if it's available on your machine), try to compile with dcc over gcc. The dcc compiler picks up on a few extra things that gcc will overlook. If you do use gcc, compile with the -Wall and -Werror flags.
 
-Finally, do not forget to compile as frequently as you can! It's much easier to deal with a few errors at a time, than hundreds all in one go.
+Finally, compile as frequently as you can! It's much easier to deal with a few small errors at a time, than tens, or hundreds all in one go.
 
 ## Printing output
 
@@ -53,7 +54,7 @@ In this example for instance our output is not the "One loop" expected.
 int n = 0;
 printf("n value initialised\n", );
 
-while( n == 0 ) {
+while (n != 0) {
     printf("One loop\n", );
     n++;
 }
@@ -71,7 +72,7 @@ So we know the program got up to that point successfully before failing to exect
 Another common use of print debugging is to check the values of variables at various points in our program. In the below example we can check what's going on inside our adder function to see everything is as expected.
 
 ```c
-int adder(int x, int y) {
+int adder (int x, int y) {
     printf("Inside adder function\nx = %d, y = %d\n", x, y);
     return (x + y);
 }
