@@ -36,7 +36,7 @@ Despite how annoying the compiler may be at times with all its error/warning mes
 
 Invest time into understanding error/warning output. It's worth it and will minimise your frustration when debugging. Understanding error outputs will allow you to quickly find and deal with your problem in the best possible way.
 
-And, if you can, try to compile with dcc over gcc -- if you have it available. dcc picks up on a few extra issues that may cause issues, that gcc will happily overlook.
+And, if you can, try to compile with dcc over gcc. The dcc compiler picks up on a few extra things that gcc will happily overlook. If you do use gcc, compile with the -Wall and -Werror flags.
 
 Finally, do not forget to compile as frequently as you can! It's much easier to deal with a few errors at a time, than hundreds all in one go. 
 
@@ -73,7 +73,6 @@ int adder(int x, int y) {
     return (x + y);
 }
 ```
-
 
 {% if page.previous %}[{{ page.previous.title }}]({{ page.previous.url }})
 \|{% endif %} [{{ page.next.title }}]({{ page.next.url }})
