@@ -4,20 +4,23 @@ title: Error Checking
 basename: 17_error_checking.html
 stub: Error checking and debugging in C
 ---
+## Why is error checking important?
 
-## Why is error checking critical?
+Even the best programmers in the world make mistakes. And mistakes, lead to bugs.
 
-Although errors might not be the biggest problem for you right now they will become more significant as you start to write larger and more complex programs, where it can be difficult to source the cause of the error.
+But what we do to prevent and minimise those mistakes is a real art.
 
-So rather than deal with that let's get familiar with some common error checking methods.
+Let's get familiar with some of the more common error checking methods.
 
-## 0. Writing "good code"
+## Writing "good code"
 
-One of the simplest ways of dealing with errors is to prevent them from occuring in the first place.
+One of the simplest ways of dealing with errors is to prevent them
+from occurring in the first place.
 
 By writing good code you reduce the chances of introducing error into your program.
 
-The style guide outlines some good practices to enforce this, but here are some other common problems:
+The style guide outlines some good practices to enforce this, but here are some
+other reasons errors occur.
 
 * General poor style
     * Large blocks of logic in one place, bad or inconsistent indentation, etc.
@@ -30,7 +33,7 @@ The style guide outlines some good practices to enforce this, but here are some 
 * Global variables
     * It's generally good practice to avoid using global variables because they can easily be misused, but if you do use them, always declare them with caps. ie, int MY_GLOBAL = 0;
 
-## 1. The compiler is your friend
+## The compiler is your friend
 
 Despite how annoying the compiler may be at times with all its error/warning messages, it is just trying to be your friend!
 
@@ -40,7 +43,7 @@ And, if you can, try to compile with dcc over gcc. The dcc compiler picks up on 
 
 Finally, do not forget to compile as frequently as you can! It's much easier to deal with a few errors at a time, than hundreds all in one go.
 
-## 2. Printing output
+## Printing output
 
 Printing output is a useful method when your program gives an unexpected output. It allows us to see the "flow" of the program with the output acting as markers to highlight where the program is going.
 
@@ -63,7 +66,7 @@ n value initialised
 
 So we know the program got up to that point successfully before failing to exectute the loop, meaning the condition in the while loop must be false. Using this method we can analyse the execution flow of the program and pinpoint the source of our unexpected output.
 
-### 2.1 Extending print debugging
+### Extending print debugging
 
 Another common use of print debugging is to check the values of variables at various points in our program. In the below example we can check what's going on inside our adder function to see everything is as expected.
 
@@ -73,6 +76,14 @@ int adder(int x, int y) {
     return (x + y);
 }
 ```
+
+## Remain calm
+
+Perhaps the most important piece of advice we can give you is to remember to keep calm.
+Whatever errors you're seeing, it's never the end of the world. Try and identify the simplest ones you can tackle  immediately and make what progress you can. Preventing yourself from getting
+overwhelmed will almost always deliver you better outcomes than panicking and
+making dramatic changes to your program to appease the compiler. Take it slow. Be
+methodical. You'll get there!
 
 {% if page.previous %}[{{ page.previous.title }}]({{ page.previous.url }})
 \|{% endif %} [{{ page.next.title }}]({{ page.next.url }})
