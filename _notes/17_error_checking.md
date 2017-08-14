@@ -7,10 +7,7 @@ stub: Error checking and debugging in C
 ## Why is error checking important?
 
 Even the best programmers in the world make mistakes. And mistakes, lead to bugs.
-
-But what we do to prevent and minimise those mistakes is a real art.
-
-Let's get familiar with some of the more common error checking methods.
+But what we do to prevent and minimise those mistakes occurring is a real skill.
 
 ## Writing "good code"
 

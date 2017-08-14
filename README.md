@@ -2,10 +2,10 @@
 A repository of material created for teaching first year computer science at UNSW.
 
 ## Introduction
-This is a static website, with other materials created to host material I've written as part of tutoring at UNSW (this project however has no affiliation). Though I have some plans to make this more dynamic in the future, perhaps with cgi, or node.js I'm happy with the current build's simplicity.
+This is a static website, with other materials created to host material written as part of tutoring at UNSW (this project however has no affiliation to the university).
 
 ## Contributing
-To contribute you can simply make a fork, make your changes in your own branch, and request a pull request merge into master. I'll be generous with any changes as long as they're in the spirit of the project.
+To contribute you can simply make a fork, make your changes in your own branch, and lodge a pull request. I'll be generous with any changes as long as they're in the spirit of the project.
 
 ### Notes with formatting:
 * Notes/Articles should be lodged in the \_notes directory and should use the template markdown from the \_generic.md starter file.
