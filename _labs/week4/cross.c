@@ -8,26 +8,26 @@ void determinePixel(int column, int row);
 
 int main(void) {
 
-    int width, height;
-    printf("Enter a width: ");
-    scanf("%d", &width);
+  int width, height;
+  printf("Enter a width: ");
+  scanf("%d", &width);
 
-    printf("Enter a height: ");
-    scanf("%d", &height);
+  printf("Enter a height: ");
+  scanf("%d", &height);
 
-    // iterate through rows and columns
-    int rows = 0;
-    while (rows < height) {
-      int columns = 0;
-      while (columns < width) {
-        determinePixel(columns, rows, width, height);
-        columns = columns + 1;
-      }
-      printf("\n");
-      rows = rows + 1;
+  // iterate through rows and columns
+  int rows = 0;
+  while (rows < height) {
+    int columns = 0;
+    while (columns < width) {
+      determinePixel(columns, rows, width, height);
+      columns = columns + 1;
     }
+    printf("\n");
+    rows = rows + 1;
+  }
 
-    return EXIT_SUCCESS;
+  return EXIT_SUCCESS;
 }
 
 // determines the pixel to print at the x, y, position specified.
