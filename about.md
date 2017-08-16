@@ -4,8 +4,7 @@ title: About
 permalink: /about/
 ---
 
-## Introduction
-This is a static website, with other materials created to host material written as part of tutoring at UNSW (this project however has no affiliation to the university).
+This is a static website created to host material written as part of tutoring at UNSW (this project however has no affiliation to the university).
 
 ## Contributing
 To contribute you can simply make a fork, make your changes in your own branch, and lodge a pull request. I'll be generous with any changes as long as they're in the spirit of the project.
