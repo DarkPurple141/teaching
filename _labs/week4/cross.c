@@ -1,10 +1,16 @@
 // Alexander Hinds, z3420752
 // Tutorial 4, Looping
+// Will print a cross as follows: (eg for size 5, 5)
+// *   *
+//  * *
+//   *
+//  * *
+// *   *
 
 #include <stdio.h>
 #include <stdlib.h>
 
-void determinePixel(int column, int row);
+void determinePixel (int col, int row, int width, int height);
 
 int main(void) {
 
@@ -31,10 +37,12 @@ int main(void) {
 }
 
 // determines the pixel to print at the x, y, position specified.
-void determinePixel (int column, int row, int width, int height) {
-  if (rows == 0 || rows == height-1) {
+void determinePixel (int col, int row, int width, int height) {
+  // this is for the left-right diagonal
+  if (row == col) {
     printf("*");
-  } else if (columns == 0 || columns == width -1) {
+  // this is for the right-leff diagonal
+  } else if (col == (width - row - 1)) {
     printf("*");
   } else {
     printf(" ");

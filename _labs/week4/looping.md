@@ -19,7 +19,7 @@ int main(void) {
     numTries = numTries + 1;
   }
 
-  // did we exit because we ran out of tries, or because we were successful
+  // did we exit because we ran out of tries, or because we were successful?
   if (numTries == MAX_TRIES) {
     printf("We've locked you out you goose!\n");
   } else {

@@ -1,3 +1,7 @@
+---
+layout: code
+---
+```c
 // Alexander Hinds, z3420752
 // Basic memory things.
 
@@ -45,3 +49,5 @@ void myFunction(int x) {
   // note the memory address here is not the same.
   printf("In myFunction x = %p\n", &x);
 }
+
+```

@@ -7,6 +7,7 @@ basename: week4
 
 * [cross.c](cross.html)
 * [looping.c](looping.html)
+* [rectangle.c](rectangle.html)
 * [memory.c](memory.html)
 
 [Back](../)

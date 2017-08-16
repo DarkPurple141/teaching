@@ -12,12 +12,9 @@ But what we do to prevent and minimise those mistakes occurring is a real skill.
 ## Writing "good code"
 
 One of the simplest ways of dealing with errors is to prevent them
-from occurring in the first place.
-
-By writing good code you reduce the chances of introducing error into your program.
-
-The style guide outlines some good practices to enforce this, but here are some
-other reasons errors occur.
+from occurring in the first place. By writing good code you reduce the chances
+of introducing error into your program. The style guide outlines some good practices
+to enforce this, but here are some other reasons errors occur.
 
 * General poor style
     * Large blocks of logic in one place, bad or inconsistent indentation, etc.
