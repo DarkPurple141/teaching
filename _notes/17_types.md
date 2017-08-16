@@ -4,6 +4,8 @@ title: Types and Memory
 basename: 17_types.html
 stub: Why do we use "types" in C?
 ---
+# Why do we use "types" in C?
+
 Types are likely to give you all sorts of headaches as a beginner programmer --
 and it's not surprising -- they're far from intuitive.
 
@@ -24,16 +26,16 @@ x = x + 1 // now x = -2147483648;
 ```
 None of these results are immediately obvious. If you play around yourself some more
 you'll likely run into many more equally puzzling results.
+
+You're probably thinking something along the lines of this:
 > Why does C have limits on values it can store?
+> Why does C make me specify types?
+> How to floats and ints differ anyway, aren't they just numbers?
 
-> Why does C have to specify types?
+The short answer to all these questions is a consequence of the we store data in memory. C uses ```types``` to help interpret blocks of binary digits. And these binary
+digits limit both the type and size of the values we can store.
 
-> How to floats and ints differ? Aren't they just numbers?
-
-The short answer to all these questions is a consequence of the we store data in memory. C uses <code>types</code> to help interpret blocks of binary digits.
-
-### Consider the ```char```
-
+## Consider the ```char```
 A ```char``` in C is 1 byte. This means it is granted eight binary digits to
 use in encoding a number/character/piece of data.
 Eight binary digits is equivalent to 256 discrete values.
@@ -55,7 +57,7 @@ specific bits must be associated with storing
 the fractional and non-fractional part of the floating point number.
 This means we lose bits to store magnitude but we gain bits to store the floating point.
 
-### What does this all mean?
+## What does this all mean?
 The thing worth remembering here is that
 all of these decisions are tradeoffs.
 If we need to get a floating point number
@@ -66,7 +68,9 @@ What's also worth understanding is that we can
 try and interpret a ```float``` as an ```int``` or an ```int``` as a ```float``` by interpreting only the relevant bits to each.
 But!!! it will come at the cost of truncating bits.
 
-[1] : http://www.cs.yale.edu/homes/aspnes/pinewiki/C(2f)FloatingPoint.html
+For more on memory you should also check out [this code]({{site.url}}/labs/week4/memory) from the week four exercises.
+
+[1]: http://www.cs.yale.edu/homes/aspnes/pinewiki/C(2f)FloatingPoint.html
 
 {% if page.previous %}[{{ page.previous.title }}]({{ page.previous.url }}) \|{% endif %}
 [{{ page.next.title }}]({{ page.next.url }})
