@@ -18,15 +18,16 @@ Sounds great right!? It is. This is what you need to do.
 
 In terminal/putty/xTerm:
 ```bash
-ssh-keygen -t rsa -b 4096 -C "your_email@example.com"```
-
+ssh-keygen -t rsa -b 4096 -C "your_email@example.com"
+```
 Then press enter, enter, enter. IE don't enter a passphrase on prompt. You don't need one.
 
 ```bash
 # Now
 cd ~/.ssh/
 # and then:
-cat id_rsa.pub```
+cat id_rsa.pub
+```
 Copy the output. In full. Now ssh into cse as you normally would.
 
 ```bash
