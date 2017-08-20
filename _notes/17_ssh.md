@@ -45,7 +45,7 @@ echo "<paste in here>" >> ~/.ssh/authorized_keys
 ```
 And you're done!
 
-### If you're feeling tricky
+## If you're feeling tricky
 You could do the above using [scp](17_scp):
 ```bash
 # Don't do this if you already have authorized_keys setup as it will be overwritten
