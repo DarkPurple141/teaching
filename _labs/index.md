@@ -10,5 +10,6 @@ examples, you will find *everything* we covered here.
 * [Week 2](week2) (If/Else statements)
 * [Week 3](week3) (Functions)
 * [Week 4](week4) (Loops)
+* [Week 5](week5) (Arrays and Strings)
 
 [Main Menu]({{site.url}})
