@@ -19,7 +19,7 @@ int main(int argc, char *argv[]) {
 }
 
 void setArrayValues(int length, int array[], int value) {
-
+  // sets the values of the array.
   int i = 0;
   while (i < ARRAY_LENGTH) {
     array[i] = value;

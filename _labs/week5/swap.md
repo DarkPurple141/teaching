@@ -1,3 +1,10 @@
+---
+layout: code
+---
+```c
+// Alexander Hinds, z3420752
+// swaps two values, then swaps them back again.
+
 #include <stdio.h>
 #include <stdlib.h>
 
@@ -26,3 +33,5 @@ void swap(int * a, int * b) {
   *a = temp;
   return;
 }
+
+```
