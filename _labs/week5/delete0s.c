@@ -6,7 +6,7 @@
 
 #define STRING_MAX 20
 
-void deleteOs(char * string);
+void deleteOs(char *string);
 
 int main(int argc, char *argv[]) {
 
@@ -18,13 +18,8 @@ int main(int argc, char *argv[]) {
   return EXIT_SUCCESS;
 }
 
-void deleteOs(char * string) {
+void deleteOs(char *string) {
   int index = 0;
-  while (string[index] != '\0') {
-    if (!(string[index] == 'o' || string[index] == 'O')) {
-      putchar(string[index]);
-    }
-    index++;
-  }
+
   putchar('\n');
 }

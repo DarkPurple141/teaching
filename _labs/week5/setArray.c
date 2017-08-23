@@ -19,11 +19,13 @@ int main(int argc, char *argv[]) {
 }
 
 void setArrayValues(int length, int array[], int value) {
+
   int i = 0;
   while (i < ARRAY_LENGTH) {
     array[i] = value;
     i++;
   }
+
 }
 
 void testProgram(int length, int array[], int value) {

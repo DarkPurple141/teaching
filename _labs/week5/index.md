@@ -5,9 +5,9 @@ basename: week5
 ---
 ### {{page.title}}
 
-* [cross.c](cross.html)
-* [looping.c](looping.html)
-* [rectangle.c](rectangle.html)
-* [memory.c](memory.html)
+* [array.c](array.html)
+* [capitalise.c](capitalise.html)
+* [ascii.c](ascii-strings.html)
+* [swap.c](swap.html)
 
 [Back](../)

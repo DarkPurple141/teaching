@@ -4,20 +4,20 @@
 #include <stdio.h>
 #include <stdlib.h>
 
-char capitalise(void);
+char capitalise(char c);
 
 int main(void) {
   char c = 0;
   while (c != EOF) { // -1
-    c = capitalise();
+    c = getchar();
+    c = capitalise(c);
     putchar(c);
   }
   return EXIT_SUCCESS;
 }
 
 // read a value once.
-char capitalise(void) {
-  char c = getchar();
+char capitalise(char c) {
   if (c >= 'a' && c <= 'z') {
     c = c - 32;
   }
