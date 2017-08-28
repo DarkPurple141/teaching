@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define SIZE 3
+#define SIZE 32
 
 // For writing BMP
 #define PIXEL_START 26
@@ -17,13 +17,19 @@
 #define PIXEL_BITS  24
 #define HEADER_SIZE 12
 
+typedef unsigned char color;
+
 typedef struct _pixel {
-    unsigned char red;
-    unsigned char green;
-    unsigned char blue;
+    color red;
+    color green;
+    color blue;
 } pixel;
 
-void drawPacman(pixel pixels[SIZE][SIZE]);
+typedef struct _pixel* Pixel;
+
+void setPixel(Pixel p, color red, color green, color blue);
+void writePixel(int fp, pixel p);
+void draw(pixel pixels[SIZE][SIZE]);
 
 // Write an image to output
 void writeImage(int output, pixel pixels[SIZE][SIZE]);
@@ -33,7 +39,7 @@ int main(int argc, char *argv[]) {
     // remember, it's pixels[y][x]
     pixel pixels[SIZE][SIZE];
 
-    drawPacman(pixels);
+    draw(pixels);
 
     // Write the image to output
     writeImage(STDOUT_FILENO, pixels);
@@ -41,11 +47,37 @@ int main(int argc, char *argv[]) {
     return EXIT_SUCCESS;
 }
 
-// Draws a 3x3 image of pacman
-void drawPacman(pixel pixels[SIZE][SIZE]) {
+void setPixel(Pixel p, color red, color green, color blue) {
+    // set colour
+    p->red   = red;
+    p->green = green;
+    p->blue  = blue;
+}
 
-    // complete this function
+// Draws a SIZExSIZE image of pacman
+void draw(pixel pixels[SIZE][SIZE]) {
 
+    int i,j;
+    i = 0;
+    while (i < SIZE) {
+        j = 0;
+        while (j < SIZE) {
+            if ((i-SIZE/2)*(i-SIZE/2) + (j-SIZE/2)*(j-SIZE/2) <= SIZE/2*SIZE/2) {
+              setPixel(&pixels[i][j], i*j%255, i*SIZE%255, i*j%255);
+            } else {
+              setPixel(&pixels[i][j], 255, 0, 0);
+            }
+            j++;
+        }
+        i++;
+    }
+
+}
+
+void writePixel(int file, pixel p) {
+    write(file, &(p.blue), sizeof(p.blue));
+    write(file, &(p.green), sizeof(p.green));
+    write(file, &(p.red), sizeof(p.red));
 }
 
 // Writes the pixels as a BMP file using the specification from
@@ -94,17 +126,14 @@ void writeImage(int output, pixel pixels[SIZE][SIZE]) {
     // Write each of the pixels
     int padding = 0x01234567;
     int y = 0;
+    pixel pixel;
     while (y < SIZE) {
         int x = 0;
         while (x < SIZE) {
             // Write the blue, green, then red pixels
-            pixel pixel = pixels[y][x];
-            write(output, &(pixel.blue), sizeof(pixel.blue));
-            write(output, &(pixel.green), sizeof(pixel.green));
-            write(output, &(pixel.red), sizeof(pixel.red));
+            writePixel(output, pixels[y][x]);
             x++;
         }
-
         // Write the row padding bytes
         write(output, (char *)&padding, rowPadding);
         y++;

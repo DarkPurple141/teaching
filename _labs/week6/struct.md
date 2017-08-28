@@ -8,5 +8,6 @@ basename: week6
 * [bmp.c](bmp.html)
 * [complex.c](complex.html)
 * [struct.c](struct.html)
+* [server.c](server.html)
 
 [Back](../)

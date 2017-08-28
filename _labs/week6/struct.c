@@ -1,12 +1,20 @@
----
-layout: default
-title: Week 6
-basename: week6
----
-### {{page.title}}
+#include <stdio.h>
+#include <stdlib>
+#include <math.h>
 
-* [bmp.c](bmp.html)
-* [complex.c](complex.html)
-* [struct.c](struct.html)
+typedef struct _myStruct {
+  // some data
+} myStruct;
 
-[Back](../)
+// can be put into an array
+
+// can also use pointers with it
+
+// can have functions with them too.
+
+// also whats a typedef
+
+int main(int argc, char *argv[]) {
+  /* code */
+  return EXIT_SUCCESS;
+}
