@@ -2,30 +2,48 @@
 layout: code
 ---
 ```c
-// Alexander Hinds, z3420752
-// capitalise the lowercase ascii letters
+// Calculate the magnitude of a complex number
 
 #include <stdio.h>
 #include <stdlib.h>
+#include <math.h>
 
-char capitalise(void);
+// DO NOT CHANGE THIS STRUCT
+typedef struct _complex {
+    double real;
+    double imaginary;
+} complex;
 
-int main(void) {
-  char c = 0;
-  while (c != EOF) { // -1
-    c = capitalise();
-    putchar(c);
-  }
-  return EXIT_SUCCESS;
+double complexAbsolute(complex c);
+
+// DO NOT CHANGE THIS MAIN FUNCTION
+int main (int argc, char *argv[]) {
+
+    // getting the complex number
+    complex c;
+
+    printf("Enter the real part: ");
+    scanf("%lf", &c.real);
+
+    printf("Enter the imaginary part: ");
+    scanf("%lf", &c.imaginary);
+
+    // get the absolute value
+    double absoluteValue = complexAbsolute(c);
+
+    // print the value
+    printf("The absolute value is %.2lf.\n", absoluteValue);
+
+    return EXIT_SUCCESS;
 }
+// END OF MAIN FUNCTION
 
-// read a value once.
-char capitalise(void) {
-  char c = getchar();
-  if (c >= 'a' && c <= 'z') {
-    c = c - 32;
-  }
-  return c;
+// this function returns the magnitude (absolute value)
+// of a complex number
+double complexAbsolute(complex c) {
+    // PUT YOUR CODE HERE;
+
+    return 0; // CHANGE THIS TO YOUR RETURN VALUE
 }
 
 ```

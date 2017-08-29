@@ -1,15 +1,12 @@
 //
-// A simmple poetry server
+// A simple poetry server
 //
 // Modified by
-//  ... (z0000000)
-//  ... (z0000000)
-//
-// Modified on 2017-08-??
-// Tutor's name (dayHH-lab)
+// Alexander Hinds
+// Modified on 2017-08-25
 //
 // simpleServer.c
-//
+// Written by
 // Richard Buckland 28/01/11, 30/3/14.
 // Licensed under Creative Commons SA-BY-NC 3.0, share freely.
 //
@@ -25,7 +22,9 @@
 #define REQUEST_BUFFER_SIZE 1000
 #define DEFAULT_PORT 1511
 #define NUMBER_OF_PAGES_TO_SERVE 10
+#ifndef MSG_MORE
 #define MSG_MORE      0x8000
+#endif
 // after serving this many pages the server will halt
 
 int waitForConnection (int serverSocket);

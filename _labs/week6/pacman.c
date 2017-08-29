@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define SIZE 32
+#define SIZE 32 // change at your leisure
 
 // For writing BMP
 #define PIXEL_START 26
@@ -56,7 +56,6 @@ void setPixel(Pixel p, color red, color green, color blue) {
 
 // Draws a SIZExSIZE image of pacman
 void draw(pixel pixels[SIZE][SIZE]) {
-
     int i,j;
     i = 0;
     while (i < SIZE) {
@@ -71,7 +70,6 @@ void draw(pixel pixels[SIZE][SIZE]) {
         }
         i++;
     }
-
 }
 
 void writePixel(int file, pixel p) {
