@@ -8,7 +8,7 @@
 #include <stdlib.h>
 #include <unistd.h>
 
-#define SIZE 32 // change at your leisure
+#define SIZE 3        // change at your leisure
 
 // For writing BMP
 #define PIXEL_START 26
@@ -62,7 +62,7 @@ void draw(pixel pixels[SIZE][SIZE]) {
         j = 0;
         while (j < SIZE) {
             if ((i-SIZE/2)*(i-SIZE/2) + (j-SIZE/2)*(j-SIZE/2) <= SIZE/2*SIZE/2) {
-              setPixel(&pixels[i][j], i*j%255, i*SIZE%255, i*j%255);
+              setPixel(&pixels[i][j], 255, 0, i*j%255);
             } else {
               setPixel(&pixels[i][j], 255, 0, 0);
             }

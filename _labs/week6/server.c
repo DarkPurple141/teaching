@@ -83,7 +83,7 @@ int main (int argc, char *argv[]) {
 }
 
 void serveText (int socket) {
-    const char *message = "Replace this with a simple message\n";
+    const char *message = "<h2>Replace this with a simple message</h2>";
 
     // echo the http response to the console for debugging purposes
     printf ("%s", message);
@@ -95,7 +95,7 @@ void serveText (int socket) {
 void sendTextHeader (int socket) {
     const char *message =
         "HTTP/1.1 200 OK\r\n"
-        "Content-Type: text/plain\r\n"
+        "Content-Type: text/html\r\n"
         "Connection: close\r\n"
         "\r\n";
     send (socket, message, strlen (message), MSG_MORE);
