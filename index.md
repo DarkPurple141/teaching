@@ -19,3 +19,4 @@ All your C needs.
 * [Week 3](labs/week3) (Functions)
 * [Week 4](labs/week4) (Loops)
 * [Week 5](labs/week5) (Arrays and Strings)
+* [Week 6](labs/week6) (Structs, BMPs and basic web servers)
