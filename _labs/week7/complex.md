@@ -1,3 +1,7 @@
+---
+layout: code
+---
+```c
 #include <stdio.h>
 #include <math.h>
 #include "complex.h"
@@ -23,3 +27,4 @@ complex complexAdd(complex a, complex b) {
 double complexMag(complex a) {
   return sqrt(a.real*a.real + a.imaginary*a.imaginary);
 }
+```

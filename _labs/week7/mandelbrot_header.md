@@ -1,3 +1,7 @@
+---
+layout: code
+---
+```c
 #ifndef _MANDEL_H
 #define _MANDEL_H
 
@@ -12,3 +16,4 @@ void printMandelbrot(double left, double top);
 void printPixel(double x, double y);
 
 #endif
+```

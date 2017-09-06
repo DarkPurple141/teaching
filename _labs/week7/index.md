@@ -8,5 +8,6 @@ basename: week7
 * [complex.c](complex.html)
 * [complex.h](complex_header.html)
 * [mandelbrot.c](mandelbrot.html)
+* [mandelbrot.h](mandelbrot_header.html)
 
 [Back](../)

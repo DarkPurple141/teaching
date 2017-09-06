@@ -1,3 +1,7 @@
+---
+layout: code
+---
+```c
 #include <stdio.h>
 #include <stdlib.h>
 #include "complex.h"
@@ -10,7 +14,7 @@ int main(int argc, char *argv[]) {
   scanf("%lf %lf", &x, &y);
   printf("mandelbrot for x:%lf y:%lf\n",x, y);
   printMandelbrot(x, y);
-  
+
   return EXIT_SUCCESS;
 }
 
@@ -53,3 +57,4 @@ void printPixel(double x, double y) {
     printf("*");
   }
 }
+```

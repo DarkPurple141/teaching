@@ -11,5 +11,7 @@ examples, you will find *everything* we covered here.
 * [Week 3](week3) (Functions)
 * [Week 4](week4) (Loops)
 * [Week 5](week5) (Arrays and Strings)
+* [Week 6](week6) (Structs, BMPs and basic web servers)
+* [Week 7](week7) (Malloc, Mandelbrot)
 
-[Main Menu]({{site.url}})
+[Main Menu]({{ site.url }})

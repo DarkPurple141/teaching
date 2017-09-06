@@ -1,3 +1,7 @@
+---
+layout: code
+---
+```c
 #ifndef _COMPLEX_H
 #define _COMPLEX_H
 
@@ -18,3 +22,4 @@ complex complexAdd(complex a, complex b);
 double complexMag(complex a);
 
 #endif
+```
