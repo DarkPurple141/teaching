@@ -21,14 +21,9 @@ int main(int argc, char *argv[]) {
 int escapeSteps(double x, double y) {
   // return the number of escape steps
   int steps = 0;
-  complex w = {0, 0};
-  complex z = {x, y};
-  while (complexMag(w) < MANDELBROT_LIM && steps < MAX_STEPS) {
-    // w = w*w
-    w = complexMult(w, w);
-    w = complexAdd(w, z);
-    steps++;
-  }
+  /*
+    DIY
+  */
 
   return steps;
 }
