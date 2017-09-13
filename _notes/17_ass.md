@@ -15,23 +15,26 @@ at least print the Mandelbrot like we did in the week 7 tute to the terminal.
 
 If you can't do that, you've probably got other problems.
 
-When in doubt, please printf values to check how your program is executing.
+When in doubt, don't forget `printf` values to check how your program is executing.
 
-## You're allowed to use sscanf
+Even better, use a tests file to make sure your program is working as it's supposed to be.
+I demonstrated this in this week's lab for this very reason.
+
+## You're allowed to use `sscanf`
 
 One thing that I've only just been made aware of is the use of `sscanf` is allowed.
 
-What's sscanf? It's a library function that allows you to parse a string in a simple way.
+What's `sscanf`? It's a library function that allows you to parse a string in a simple way.
 
-For details look it up online but it takes a string, a formatted string, and some variables
-which you're scanning into. (Similar to scanf)
+For exact details look it up online but briefly it takes a string, a formatted string,
+and some variables which you're scanning into. (Similar to `scanf`)
 
 Eg. Say I had:
 ```c
 char * string = "Hey Alex, you're born in 1900 right, lol?";
 char * special;
 int date;
-sscanf(string, "Hey %s, you're born in %d right," %s, %d);
+sscanf(string, "Hey %s, you're born in %d right," special, &date);
 // special now = Alex
 // data = 1900.
 ```
