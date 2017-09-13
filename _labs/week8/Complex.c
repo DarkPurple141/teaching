@@ -14,13 +14,18 @@
 typedef struct _complex {
     double re;
     double im;
+    int id;
 } complex;
 
 // Create a new `Complex` number from two `double`s.
 Complex newComplex (double re, double im) {
     // Add your code here.
+    Complex c = malloc(sizeof(complex));
+    c->re = re;
+    c->im = im;
+    c->id = 0;
 
-    return NULL;
+    return c;
 }
 
 // Release all resources associated with a `Complex` number.

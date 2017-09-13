@@ -32,17 +32,20 @@
 // Do not change this #define, or your program will fail the autotests!
 
 int findDuplicate (int length, int array[]) {
-    int i = 0;
-    int j;
+
+    int i, j;
+    i = j = 0;
+
     while (i < length) {
       j = 0;
-      while (j < i) {
-        if (array[j] == array[i]) {
+      while (j < length) {
+        if (j != i && array[i] == array[j]) {
           return array[i];
         }
         j++;
       }
       i++;
     }
+
     return NO_DUPLICATE;
 }

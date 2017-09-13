@@ -19,12 +19,12 @@
 int countFavourite (int length, int array[]) {
     int i = 0;
     int counter = 0;
-
     while (i < length) {
       if (array[i] % 17 == 0) {
         counter++;
       }
       i++;
     }
+
     return counter;
 }

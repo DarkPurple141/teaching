@@ -3,11 +3,9 @@
 
 int main(int argc, char *argv[]) {
 
-  //Complex c  = { 1.0, 2.0 }
-
-  Complex c = newComplex(1.0, 2.0);
-  //printf("Trying to access c->re = %lf\n", );
-  showComplex(c);
+  Complex myComplex = newComplex(0, 0);
+  //printf("myComplex = %lf %lf\n", myComplex->re, myComplex->im);
+  showComplex(myComplex);
 
   return 0;
 }

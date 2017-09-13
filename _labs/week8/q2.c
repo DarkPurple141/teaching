@@ -19,12 +19,13 @@
 // Do not change these #defines, or your program will fail the autotests!
 
 int containsUppercase (char *string) {
-    // Write your solution here.
-    while (*string != '\0') {
+    // *string != NULL
+    while (*string) {
       if (*string >= 'A' && *string <= 'Z') {
         return TRUE;
       }
       string++;
     }
+
     return FALSE;
 }
