@@ -22,3 +22,4 @@ All your C needs.
 * [Week 6](labs/week6) (Structs, BMPs and basic web servers)
 * [Week 7](labs/week7) (Malloc, Mandelbrot)
 * [Week 8](labs/week8) (Exam Qs, Testing)
+* [Week 9](labs/week8) (ADTs, Coffee ADT)

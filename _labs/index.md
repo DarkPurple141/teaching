@@ -13,5 +13,7 @@ examples, you will find *everything* we covered here.
 * [Week 5](week5) (Arrays and Strings)
 * [Week 6](week6) (Structs, BMPs and basic web servers)
 * [Week 7](week7) (Malloc, Mandelbrot)
+* [Week 8](week8) (Exam Qs, Testing)
+* [Week 9](week9) (ADTs, Coffee ADT)
 
 [Main Menu]({{ site.url }})
