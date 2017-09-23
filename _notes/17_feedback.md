@@ -23,7 +23,7 @@ city == 9
 While many *did* do this, not as many thought to extend it to months. The obvious ones here were:
 
 ```c
-#define SEPTEMBER 9
+#define OCTOBER 10
 #define APRIL 4
 ```
 Not a big deal but would've helped readability.
