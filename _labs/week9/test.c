@@ -1,6 +1,12 @@
 //#include <string.h>
 #include <stdio.h>
-#include "String.h"
+#include "String_Header.h"
+
+typedef struct _special {
+  int x;
+  int y;
+  char z;
+} special;
 
 int main(int argc, char *argv[]) {
 
@@ -17,6 +23,8 @@ int main(int argc, char *argv[]) {
 
   printf("This should compare if %s and %s are equal, result: %d\n",
     myString, strcpy(buffer, myString), strcmp(buffer, myString));
+
+  printf("sizeof(%lu)\n", sizeof(special));
 
   return 0;
 }

@@ -1,5 +1,5 @@
 #include <stdio.h>
-#include "String.h"
+#include "String_Header.h"
 
 // works the same way as strcpy in <string.h>
 char *strcpy(char *dest, const char *src) {
