@@ -1,4 +1,4 @@
-// The game of Final Card-Down. v0.0.3
+// The game of Final Card-Down. v1.1.2
 //
 // !!! DO NOT CHANGE THIS FILE !!!
 
@@ -8,11 +8,25 @@
 #ifndef GAME_H
 #define GAME_H
 
+#define NUM_PLAYERS 4
+
+#define NOT_FINISHED -1
+#define NO_WINNER 4
 
 #define FALSE 0
 #define TRUE (!FALSE)
 
 typedef struct _game *Game;
+
+typedef struct _game {
+   int turns;
+   int numPlayers;
+   Player player[NUM_PLAYERS]
+   ...
+
+} game;
+
+currentTurn(g) == turns.
 
 typedef enum {
     // Clockwise is 0 -> 1 -> 2 -> 3 -> 0 ...
@@ -62,13 +76,13 @@ Game newGame(int deckSize, value values[], color colors[], suit suits[]);
 //
 // This should free all existing memory used in the game including
 // allocations for players and cards.
-void destroyGame(Game g);
+void destroyGame(Game game);
 
 // The following functions can be used by players to discover
 // information about the state of the game.
 
 // Get the number of cards that were in the initial deck.
-int numCards(Game g);
+int numCards(Game game);
 
 // Get the number of cards in the initial deck of a particular
 // suit.
@@ -96,22 +110,30 @@ int currentTurn(Game game);
 int playerPoints(Game game, int player);
 
 // Get the current direction of play.
-direction getPlayDirection(Game game);
+direction playDirection(Game game);
 
-// Get the number of viewable previous turns.
-int pastTurns(Game game);
+// This function returns the number of turns that have occurred in the
+// game so far including the current turn.
+// When using either the turnMoves or pastMove function,
+// the turn number should be less than the number of moves that this
+// function returns.
+// (i.e. on turn 0 of the game, this should return 1, as there has been
+// 1 turn so far including the current turn; if you called pastMove you
+// would need to call it on turn 0, as this is the only possible value
+// less than 1.)
+int numTurns(Game game);
 
 // Get the number of moves that happened on a turn.
 //
 // A turn may consist of multiple moves such as drawing cards,
 // playing cards, and ending the turn.
-int turnMoves(Game game, int n);
+int turnMoves(Game game, int turn);
 
 // Look at a previous move from a specified turn.
 playerMove pastMove(Game game, int turn, int move);
 
 // Get the number of cards in a given player's hand.
-int playerCardCount(Game game, int n);
+int playerCardCount(Game game, int player);
 
 // Get the number of cards in the current player's hand.
 int handCardCount(Game game);
@@ -121,7 +143,7 @@ int handCardCount(Game game);
 // The player should not need to free() this card,
 // so you should not allocate or clone an existing card
 // but give a reference to an existing card.
-Card handCard(Game game, int n);
+Card handCard(Game game, int card);
 
 // Check if a given move is valid.
 //
@@ -147,15 +169,21 @@ Card handCard(Game game, int n);
 // * The player has played at least one card before finishing their turn,
 //   unless a draw-two was played, in which case the player may not
 //   play a card, and instead must draw the appropriate number of cards.
-int isValidMove(Game game, playerMove action);
+int isValidMove(Game game, playerMove move);
 
 // Play the given action for the current player
 //
-// If the player draws a card, their turn should end and it should then
-// become the turn of the next player.
+// If the player makes the END_TURN move, their turn ends,
+// and it becomes the turn of the next player.
 //
 // This should _not_ be called by the player AI.
-void playMove(Game game, playerMove action);
+void playMove(Game game, playerMove move);
+
+// Check the game winner.
+//
+// Returns NOT_FINISHED if the game has not yet finished,
+// 0-3, representing which player has won the game, or
+// NO_WINNER if the game has ended but there was no winner.
+int gameWinner(Game game);
 
 #endif // GAME_H
-
