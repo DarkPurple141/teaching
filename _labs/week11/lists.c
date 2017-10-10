@@ -54,6 +54,8 @@ void append(List list, int item) {
    }
 }
 
+
+
 void appendRecursive(Node n, int item) {
    if (n->next == NULL) {
       n->next = newNode(item);
@@ -66,8 +68,8 @@ int countHelper(Node n) {
    if (n == NULL) {
       return 0;
    } else {
-      return 1 + countHelper(n->next);
       // 1 + (1 + countHelper( 1 + countHelper ))..... == 5
+      return 1 + countHelper(n->next);
    }
 }
 
@@ -76,6 +78,22 @@ int countItems(List l) {
       return 0;
    } else {
       return countHelper(l->head);
+   }
+}
+
+Node removeRecursiveHelper(Node n, int item) {
+   if (n == NULL) {
+      return NULL;
+   } else {
+      return n->next = removeRecursiveHelper(n->next, item);
+   }
+}
+
+void removeRecursive(List l, int item) {
+   if (l == NULL) {
+      return;
+   } else {
+      l->head = removeRecursiveHelper(l->head, item);
    }
 }
 
