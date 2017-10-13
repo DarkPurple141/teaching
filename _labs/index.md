@@ -15,5 +15,6 @@ examples, you will find *everything* we covered here.
 * [Week 7](week7) (Malloc, Mandelbrot)
 * [Week 8](week8) (Exam Qs, Testing)
 * [Week 9](week9) (ADTs, Coffee ADT)
+* [Week 11](week11) (Intro to Lists)
 
 [Main Menu]({{ site.url }})
