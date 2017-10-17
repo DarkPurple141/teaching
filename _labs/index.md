@@ -16,5 +16,6 @@ examples, you will find *everything* we covered here.
 * [Week 8](week8) (Exam Qs, Testing)
 * [Week 9](week9) (ADTs, Coffee ADT)
 * [Week 11](week11) (Intro to Lists)
+* [Week 12](week12) (More on Lists)
 
 [Main Menu]({{ site.url }})

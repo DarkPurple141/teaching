@@ -24,3 +24,4 @@ All your C needs.
 * [Week 8](labs/week8) (Exam Qs, Testing)
 * [Week 9](labs/week9) (ADTs, Coffee ADT)
 * [Week 11](labs/week11) (Intro to Lists)
+* [Week 12](labs/week12) (a basic AI, recursion)
