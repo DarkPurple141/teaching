@@ -21,23 +21,43 @@
 // We can take advantage of that for our very simple A.I. to determine
 // where we are at in our turn, and thus what move we should make.
 
+static int canPlayCard(Game g, playerMove *move) {
+
+   int handCards = handCards(g);
+   int i = 0;
+   while (i < handCards) {
+      Card c = handCard(g, i);
+      move->card = c;
+      if (isValidMove(g, *move) {
+         return TRUE;
+      }
+      i++;
+   }
+
+   return FALSE;
+
+}
+
 playerMove decideMove(Game game) {
 
-    // Start out by making a move struct, to say what our move is.
-    playerMove move;
+   // Start out by making a move struct, to say what our move is.
+   playerMove move;
 
     // Set our move to be END_TURN, and check whether that's
     // a valid move -- if it is, then just end our turn (for now).
-    move.action = PLAY_CARD;
+   move.action = PLAY_CARD;
 
+   if (canPlayCard(game, &move) == TRUE) {
+      return move;
+   } else {
+      move.action = END_TURN;
+      if (isValidMove(game, move) == TRUE) {
 
-    // If it's not valid to end turn, we must need to make
-    // some other action...
-    //
-    // What actions are valid at this point?
-    if (!isValidMove(move)) {
-        move.action = // ?????
-    }
+      } else {
+         move.action = DRAW_CARD;
+      }
+   }
 
-    return move;
+   return move;
+
 }

@@ -27,12 +27,17 @@ void printArray(int index, int array[], int size) {
    }
 }
 
+
 int escapeSteps(double x, double y, int steps, complex w) {
   // return the number of escape steps
-  if (complexMag(w) < MANDELBROT_LIM && steps < MAX_STEPS) {
+
+  if (steps > MAX_STEPS) {
+     return MAX_STEPS;
+  } else if (complexMag(w) < MANDELBROT_LIM) {
       w = complexMult(w, w);
       w = complexAdd(w, z);
       return escapeSteps(x, y, steps+1, w);
+  else if ()
   } else {
      return steps;
   }
@@ -41,11 +46,12 @@ int escapeSteps(double x, double y, int steps, complex w) {
 
 int main() {
 
-   int array[5] = {0, 1, 2, 4, 5};
-   mapSquares(0, array, 5);
-   printArray(0, array, 5);
-
    countToTen(0);
+   int array[6] = {0, 1, 2, 3, 4, 5};
+   mapSquares(0, array, 6);
+   printArray(0, array, 6);
+
+
 
    return 0;
 }
