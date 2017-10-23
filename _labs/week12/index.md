@@ -10,6 +10,6 @@ basename: week12
 * [queue.h](queue.html)
 * [recursion.c](recursion.html)
 * [runGame.c](runGame.html)
-* [assignment](assignment)
+* [assignment2](assignment2)
 
 [Back](../)
